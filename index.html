@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+   <div class="w-75 mx-auto bg-info rounded p-3 zizo ">
+      <h1 class="text-center">CRUD SYSTEM</h1>
+
+     <div>
+      <label for="productNameInput">Product Name:</label>
+      <input oninput="validationName()" class="form-control" type="text" id="productNameInput">
+      <P id="messageName" class="alert alert-danger d-none">Invalid Pattern</P>
+     </div>
+
+     
+     <div>
+      <label for="productPriceInput">Product Price:</label>
+      <input class="form-control" type="number" id="productPriceInput">
+     </div>
+
+     <div>
+      <label for="productCategoryInput">Product Category:</label>
+      <input class="form-control" type="text" id="productCategoryInput">
+     </div>
+
+     <div>
+      <label for="productDescriptionInput">Product Description:</label>
+      <textarea class="form-control"  id="productDescriptionInput"></textarea>
+     </div>
+
+     <button onclick="addProduct()" class="btn btn-primary mt-3 w-100" id="addBtn">Add Product</button>
+     <button onclick="updateProduct()" class="btn btn-primary mt-3 w-100 d-none" id="updateBtn">Update Product</button>
+
+     <section>
+      <input id="searchInput" oninput="searchProduct()" type="text" class="form-control my-3 w-75 mx-auto " placeholder="Search by name ">
+     </section class="bg-danger mt-3">
+     <table class="table my-3 bg-light" >
+       <thead>
+         <tr >
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+         </tr>
+       </thead>
+       <tbody id="tablebody" class="ahmed">
+         <tr>
+         
+         </tr>
+       </tbody>
+     </table>
+
+   </div>
+    <!-- <button id="demo">Hello</button> -->
+  
+
+   <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+ </body>
+ </html>
